@@ -94,7 +94,6 @@
       text-decoration: underline;
     }
 
-    /* SLIDESHOW */
     .slideshow-wrapper {
       display: flex;
       justify-content: center;
@@ -139,7 +138,6 @@
     .prev { left: 10px; }
     .next { right: 10px; }
 
-    /* 🐍 SNAKE GAME */
     .snake-container {
       background: #161b22;
       border: 1px solid #30363d;
@@ -216,9 +214,7 @@
 
 <section>
   <h2>About Me</h2>
-  <p>
-    Hi! I'm a student from University of Perpetual Help who is still learning more about coding.
-  </p>
+  <p>Hi! I'm a student from University of Perpetual Help who is still learning more about coding.</p>
 </section>
 
 <section>
@@ -272,6 +268,13 @@
 </footer>
 
 <script>
+/* PREVENT ARROW KEYS FROM SCROLLING */
+window.addEventListener("keydown", function(e) {
+  if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.key)) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
 /* SLIDESHOW */
 const slides = document.querySelectorAll(".slideshow img");
 let current = 0;
