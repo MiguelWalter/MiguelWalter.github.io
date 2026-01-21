@@ -235,7 +235,7 @@
   <h2>Projects</h2>
   <ul class="projects">
     <li>
-      <a href="#">🔥 Fighting Game</a>
+      <a href="https://miguelwalter.github.io/Fighting-game-/" target="_blank">🔥 Fighting Game</a>
       <p>2D fighting game using JavaScript.</p>
     </li>
     <li>
@@ -245,7 +245,6 @@
   </ul>
 </section>
 
-<!-- 🐍 SNAKE GAME -->
 <section>
   <h2>🎮 Play Snake</h2>
   <div class="snake-container">
@@ -336,13 +335,11 @@ setInterval(nextSlide, 4000);
     if (dir==="LEFT") head.x--;
     if (dir==="RIGHT") head.x++;
 
-    // WALL COLLISION
     if (head.x < 0 || head.y < 0 || head.x >= COLS || head.y >= ROWS) {
       endGame();
       return;
     }
 
-    // SELF COLLISION
     if (snake.some(s=>s.x===head.x && s.y===head.y)) {
       endGame();
       return;
@@ -354,9 +351,7 @@ setInterval(nextSlide, 4000);
       score += 10;
       scoreEl.textContent = score;
       spawnFood();
-
-      // INCREASE SPEED
-      speed = Math.max(50, speed - 5); // faster each food, min speed 50ms
+      speed = Math.max(50, speed - 5);
       clearInterval(gameInterval);
       gameInterval = setInterval(update, speed);
     } else snake.pop();
@@ -393,7 +388,7 @@ setInterval(nextSlide, 4000);
   }
 
   window.setDir = d => {
-    if (gameOver) { start(); return; } // restart if game over
+    if (gameOver) { start(); return; }
     if (
       (d==="UP" && dir!=="DOWN") ||
       (d==="DOWN" && dir!=="UP") ||
