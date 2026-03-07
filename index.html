@@ -48,6 +48,31 @@
       font-weight: bold;
     }
 
+    /* NEW: Project Button Styles */
+    .project-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #58a6ff, #1f6feb);
+      color: white !important;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .project-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(31, 111, 235, 0.4);
+      text-decoration: none !important;
+    }
+
+    .project-button i {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
     .container {
       max-width: 900px;
       margin: auto;
@@ -193,6 +218,15 @@
   <div class="links">
     <a href="https://github.com/MiguelWalter" target="_blank">GitHub</a>
   </div>
+  
+  <!-- NEW: Project Button -->
+  <div style="margin-top: 2rem;">
+    <a href="https://miguelwalter.github.io/game-scraping-fontend/" 
+       target="_blank" 
+       class="project-button">
+      🎮 GamesRadar Web Scraper
+    </a>
+  </div>
 </header>
 
 <main class="container">
@@ -224,6 +258,9 @@
     <span>CSS</span>
     <span>JavaScript</span>
     <span>Git</span>
+    <span>Python</span>
+    <span>Flask</span>
+    <span>Web Scraping</span>
   </div>
 </section>
 
@@ -237,6 +274,10 @@
     <li>
       <a href="#">🌐 Portfolio Website</a>
       <p>Personal portfolio built with HTML, CSS, JS.</p>
+    </li>
+    <li>
+      <a href="https://miguelwalter.github.io/game-scraping-fontend/" target="_blank">🎮 GamesRadar Web Scraper</a>
+      <p>Search any game and get 10 articles from GamesRadar. Built with Python/Flask backend on Vercel.</p>
     </li>
   </ul>
 </section>
